@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./css/menu_burger.css" rel="stylesheet">
+    <link href="./css/main.css" rel="stylesheet">
+    <link href="./css/footer.css" rel="stylesheet">
+    <link href="./css/smartphone.css" rel="stylesheet">
+    <link href="./css/tablette.css" rel="stylesheet">
+    <script src="./js/menu_burger.js"></script>
+    <title>Accueil</title>
+</head>
+
+<body>
+    <header>
+        <div class="navbar">
+            <button class="openbtn" id="menuButton" onclick="toggleNav()">&#9776; Menu</button>
+            <span class="site-name">Media Auto</span>
+            <img src="./media/logo/logo.png" alt="logo du siteweb" class="logo">
+        </div>
+    </header>
+    
+    <aside id="mySidebar" class="sidebar">
+        <a href="index.html">Accueil</a>
+        <a href="article.html">Nos articles</a>
+        <a href="galerie.html">Nos photos</a>
+        <div id="reseau-bar">
+            <a href="https://www.instagram.com/devy_brn/"><img src="./media/logo/logo_instagram.svg" alt="instagram logo"></a>
+            <a href="https://www.instagram.com/tom_ctps/"><img src="./media/logo/logo_facebook_contour.svg" alt="facebook logo"></a>
+            <a href="https://x.com/LardellierP"><img src="./media/logo/logo_twitter_contour.svg" alt="X logo"></a>
+            <a href="https://www.instagram.com/tom_ctps/"><img src="./media/logo/logo_youtube_contour.svg   " alt="youtube logo"></a>
+        </div>
+    </aside>
+
+    <main>
+        <section id="intro">
+            <div class="intro-content">
+                <h1>Bienvenue au Mondial de l'Automobile 2024</h1>
+                <p>Le Mondial de l'Automobile 2024 s'annonce comme un événement phare pour découvrir les dernières innovations en matière de véhicules électriques, de mobilité durable et de technologies avancées. Suivez l'actualité du salon à travers nos articles, photos et vidéos.</p>
+                <a href="#articles" class="button_gauche">Explorer les articles</a>
+            </div>
+        </section>
+    
+        <section id="articles">
+            <h2>Nos Articles Récents</h2>
+            <div class="article-container">
+                <!-- Article 1 -->
+                <article class="article">
+                    <img src="./media/photo car/20241019_093047.jpg" alt="Véhicule électrique">
+                    <div class="article-content">
+                        <h3>Les véhicules électriques à l'honneur</h3>
+                        <p>Les véhicules électriques occupent une place centrale au Mondial 2024. Découvrez les derniers modèles et technologies qui transforment l'industrie automobile.</p>
+                    </div>
+                </article>
+    
+                <!-- Article 2 -->
+                <article class="article">
+                    <img src="./media/photo car/20241019_092748.jpg" alt="Concept automobile futuriste">
+                    <div class="article-content">
+                        <h3>Les concepts automobiles du futur</h3>
+                        <p>De nouveaux concepts automobiles étonnants sont dévoilés au Mondial, offrant une vision futuriste de la mobilité. Véhicules autonomes, voitures volantes, et plus encore !</p>
+                    </div>
+                </article>
+    
+                <!-- Article 3 -->
+                <article class="article">
+                    <img src="./media/photo car/20241019_095241.jpg" alt="Innovation automobile">
+                    <div class="article-content">
+                        <h3>Innovations technologiques révolutionnaires</h3>
+                        <p>Découvrez les technologies avancées qui redéfinissent l'expérience de conduite et la sécurité. Du pilotage autonome à la connectivité avancée, ces innovations changent la donne.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+    
+        <section id="gallery-preview">
+            <h2>Galerie Photo du Mondial 2024</h2>
+            <div class="gallery-container">
+                <img src="./media/ma24_1.jpg" alt="Exposition Mondial de l'Automobile" class="gallery-item">
+                <img src="./media/ma24_2.jpg" alt="Concept automobile" class="gallery-item">
+                <img src="./media/ma24_3.jpg" alt="Véhicule électrique" class="gallery-item">
+            </div>
+            <a href="galerie.html" class="button_gauche">Voir la galerie complète</a>
+        </section>
+    </main>
+    
+    <footer class="footer">
+        <div class="footer-section">
+          <p>&copy; 2024 TopTech. Tous droits réservés.</p>
+        </div>
+        <!-- Footer +900px -->
+        <div class="footer-section" id="PC">
+          <a href="./droit.html">Mentions légales</a> |
+          <a href="./about_us">About-us</a> |
+          <a href="./contact">Contact</a>
+        </div>
+        <!-- Footer -900px -->
+        <div class="footer-section" id="NoPC">
+            <a href="./droit.html">Mentions légales</a>
+            <a href="./about_us">About-us</a>
+            <a href="./contact">Contact</a>
+        </div>
+        <div class="footer-section">
+          <a href="https://x.com/LardellierP">
+            <img src="./media/logo/logo_twitter_contour.svg" alt="Twitter">
+          </a>
+          <a href="https://x.com/LardellierP">
+            <img src="./media/logo/logo_facebook_contour.svg" alt="Facebook">
+          </a>
+          <a href="https://x.com/LardellierP">
+            <img src="./media/logo/logo_youtube_contour.svg" alt="YouTube">
+          </a>
+        </div>
+      </footer>
+</body>
+
+</html>

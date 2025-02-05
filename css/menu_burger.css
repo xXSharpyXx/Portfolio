@@ -1,0 +1,226 @@
+/* Style global de la page */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Conteneur du menu */
+.menu-overlay {
+    position: fixed;
+    top: 0;
+    right: -30%;  /* Cache le menu en dehors de l'écran à droite */
+    width: 30%;  /* Définit la largeur du menu */
+    height: 100%;
+    background: rgba(0, 0, 0, 1);
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    transition: right 1s cubic-bezier(0.7, 0, 0.2, 1), opacity 1s ease;
+    z-index: 999;
+    opacity: 0; /* Le menu est invisible au départ */
+}
+
+/* Quand le menu est actif, il vient depuis la droite */
+.menu-overlay.active {
+    right: 0;
+    opacity: 1;  /* Le menu devient visible lorsqu'il est actif */
+}
+
+/* Bouton de fermeture */
+.close-button {
+    position: absolute;
+    top: 20px;
+    left: 20px; /* Bouton de fermeture à gauche dans le menu */
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Style des liens du menu */
+.menu-overlay nav ul {
+    list-style: none;
+    padding: 4vh;
+    text-align: left;
+}
+
+.menu-overlay nav ul li {
+    margin: 20px 0;
+}
+
+.menu-overlay nav ul li a {
+    color: white;
+    font-size: 2rem;
+    text-decoration: none;
+    padding: 10px;
+    transition: all 0.3s ease;
+}
+
+.menu-overlay nav ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.2); /* Effet de survol */
+    opacity: 1;
+}
+
+/* Style du bouton burger */
+.burger {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 30px;
+    height: 4px;
+    background: white;
+    margin: 5px 0;
+    transition: all 0.3s ease;
+}
+
+/* Animation du menu burger */
+.burger.open div:nth-child(1) {
+    transform: rotate(45deg);
+    position: relative;
+    top: 8px;
+}
+
+.burger.open div:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.open div:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -8px;
+}
+
+/* Style de la page lorsque le menu est ouvert */
+body.menu-open {
+    overflow: hidden; /* Empêche le défilement de la page quand le menu est ouvert */
+}
+
+/* Bandeau fixe à droite, centré verticalement */
+.social-bar {
+    position: fixed;  /* Fixe le bandeau */
+    top: 0;  /* Démarre en haut de la page */
+    right: 0;  /* Fixe à droite */
+    z-index: 9999;  /* S'assure que le bandeau reste au-dessus des autres éléments */
+    display: flex;
+    flex-direction: column;  /* Empile les éléments verticalement */
+    align-items: center;
+    background-color: #000;  /* Fond noir pour tout le bandeau */
+    height: 100vh;  /* Hauteur de la page entière */
+    padding: 10px;
+    justify-content: center;  /* Centrer les icônes verticalement */
+}
+
+/* Style des icônes des réseaux sociaux */
+.social-bar a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;  /* Espacement entre chaque icône */
+    width: 50px;  /* Largeur des icônes */
+    height: 50px;  /* Hauteur des icônes */
+    border-radius: 50%;  /* Bord arrondi */
+    background-color: rgb(0, 0, 0);  /* Fond noir pour les icônes */
+    transition: transform 0.3s ease, background-color 0.3s ease;  /* Transition de transformation et couleur */
+    text-decoration: none;  /* Enlève le soulignement */
+}
+
+/* Effet au survol */
+.social-bar a:hover {
+    background-color: #00aced;  /* Changement de couleur au survol */
+    transform: scale(1.1);  /* Légère agrandissement au survol */
+}
+
+/* Style des icônes */
+.social-bar i {
+    font-size: 24px;  /* Taille de l'icône */
+    color: white;  /* Icônes en blanc */
+}
+
+/* Ajustements responsives */
+@media (max-width: 768px) {
+    /* Pour les écrans plus petits, ajuster la taille et les espacements */
+    .social-bar a {
+        width: 40px;
+        height: 40px;
+        margin: 8px 0;
+    }
+
+    .burger {
+        top: 10px;
+        right: 10px;
+    }
+}
+
+
+
+/* Cacher le bouton burger sur la première section */
+.first-section .burger {
+    display: none;
+}
+
+/* Afficher le bouton burger sur les autres sections */
+.page.active .burger {
+    display: block;
+}
+
+
+.burger {
+    position: absolute; /* Positionnement par rapport à .social-bar */
+    top: 40px; /* Centre verticalement */
+    left: 50%; /* Centre horizontalement */
+    transform: translate(-50%, -50%); /* Ajuste pour un vrai centrage */
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    opacity: 0; /* Caché par défaut */
+    transition: opacity 0.5s ease-in-out;
+}
+
+.burger div {
+    width: 100%;
+    height: 5px;
+    background-color: white;
+    border-radius: 5px;
+}
+.burger.fade-in {
+    opacity: 1; /* Apparition progressive */
+}
+
+.burger.fade-out {
+    opacity: 0; /* Disparition progressive */
+}
+
+
+
+
+.cv-button {
+    display: inline-block;
+    padding: 12px 25px;
+    margin-top: 1vh;
+    border: 2px solid white; /* Bordure blanche fine */
+    border-radius: 50px; /* Coins arrondis */
+    color: white;
+    text-decoration: none;
+    font-size: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.cv-button:hover {
+    background-color: white;
+    color: black;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./js/menu_burger.js" defer></script>
+    <script src="./js/scroll.js" defer></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/menu_burger.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <title>Accueil</title>
+</head>
+
+
+
+<body>
+    <div class="social-bar">
+        <!-- Bouton Burger -->
+        <button class="burger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </button>
+
+        <!-- Icônes des réseaux sociaux -->
+        <a href="https://www.facebook.com" class="facebook" target="_blank">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="https://www.instagram.com/tom_ctps/" class="instagram" target="_blank">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://www.linkedin.com" class="linkedin" target="_blank">
+            <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://www.twitter.com" class="twitter" target="_blank">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="mailto:tomctps41@gmail.com" class="email" target="_blank">
+            <i class="fas fa-envelope"></i>
+        </a>
+        <a href="https://www.behance.net" class="behance" target="_blank">
+            <i class="fab fa-behance"></i>
+        </a>
+    </div>
+
+    <!-- Menu Overlay -->
+    <div class="menu-overlay" id="menuOverlay">
+        <button class="close-button" onclick="toggleMenu()">✖</button>
+        <nav>
+            <ul>
+                <li><a href="#">Photographies</a></li>
+                <li><a href="#">Vidéos</a></li>
+                <li><a href="#">Qui Suis-je</a></li>
+                <li><a href="chemin_vers_cv.pdf" class="cv-button" target="_blank">Curriculum Vitae</a></li>
+            </ul>
+        </nav>
+    </div>
+    
+
+    <main>
+        <section class="page full-screen portfolio-section active first-section">
+            <h1>Portfolio</h1>
+            <h2>Tom Contrepois</h2>
+        </section>
+        <section class="page full-screen photo-section">
+            <h1>Galerie Photo</h1>
+        </section>
+        <section class="page full-screen video-section">
+            <h1>Vidéos</h1>
+        </section>
+        <section class="page full-screen blog-section">
+            <h1>Blog</h1>
+        </section>
+    </main>
+    
+
+
+</body>
+
+</html>

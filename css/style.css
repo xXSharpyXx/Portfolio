@@ -1,0 +1,237 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Import de la police Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+/* Style des titres dans les sections */
+.page h1 {
+    font-family: 'Poppins', sans-serif; /* Applique la police Poppins */
+    font-size: 6rem; /* Taille du texte */
+    font-weight: bold; /* Poids en gras pour plus d'impact */
+    color: white;
+    text-transform: uppercase; /* Met en majuscule pour renforcer l'impact */
+    letter-spacing: 5px; /* Espace entre les lettres pour un effet "ouvert" */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Ombre du texte */
+    
+    /* Alignement du texte */
+    position: absolute; /* Positionnement absolu pour pouvoir déplacer le texte */
+    left: 200px; /* Décale le texte depuis la gauche */
+    top: 35%; /* Centré verticalement */
+    transform: translateY(-50%); /* Centrer exactement en vertical */
+}
+
+/* Section Portfolio */
+.portfolio-section {
+    background: #000;  /* Fond noir */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    height: 100vh;  /* Assurer que la section occupe toute la hauteur de l'écran */
+    padding: 20px;
+}
+
+.portfolio-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.portfolio-content h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 6rem;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: 15px;
+}
+
+.portfolio-content h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 2rem;
+    font-weight: normal;
+    color: white;
+    margin-bottom: 30px;
+}
+
+.portfolio-buttons button {
+    background-color: transparent; /* Fond transparent */
+    color: white; /* Texte blanc */
+    border: 2px solid white; /* Contour fin blanc */
+    font-size: 1.5rem;
+    padding: 15px 30px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    text-transform: uppercase; /* Texte en majuscule */
+}
+
+.portfolio-buttons button:hover {
+    background-color: white; /* Fond blanc au survol */
+    color: black; /* Texte noir */
+    border-color: black; /* Contour noir */
+}
+
+/* Ajout d'une animation subtile au survol */
+.portfolio-buttons button:active {
+    transform: scale(0.95); /* Réduit légèrement la taille du bouton */
+    transition: transform 0.1s ease-in-out;
+}
+
+/* Full screen sections */
+.full-screen {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-align: center;
+    transition: opacity 1s ease-in-out;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.full-screen.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Images de fond */
+.photo-section {
+    background: url('../media/PHOTO1.jpg') center/cover no-repeat;
+}
+
+.video-section {
+    background: url('../media/PHOTO2.jpg') center/cover no-repeat;
+}
+
+.blog-section {
+    background: url('../media/PHOTO3.jpg') center/cover no-repeat;
+}
+
+/* Animation du texte qui entre depuis le bas */
+.slide-text-in-from-bottom {
+    animation: slideInFromBottom 1s forwards;
+}
+
+/* Animation du texte qui entre depuis le haut */
+.slide-text-in-from-top {
+    animation: slideInFromTop 1s forwards;
+}
+
+/* Animation du texte qui sort vers le haut */
+.slide-text-out-to-top {
+    animation: slideOutToTop 1s forwards;
+}
+
+/* Animation du texte qui sort vers le bas */
+.slide-text-out-to-bottom {
+    animation: slideOutToBottom 1s forwards;
+}
+
+/* Entrée du texte depuis le bas */
+@keyframes slideInFromBottom {
+    0% {
+        transform: translateY(1000%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Entrée du texte depuis le haut */
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-1000%);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Sortie du texte vers le haut */
+@keyframes slideOutToTop {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-1000%);
+    }
+}
+
+/* Sortie du texte vers le bas */
+@keyframes slideOutToBottom {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(1000%);
+    }
+}
+
+
+
+
+
+
+
+/* Bandeau fixe à droite, centré verticalement */
+.social-bar {
+    position: fixed;  /* Fixe le bandeau */
+    top: 0;  /* Démarre en haut de la page */
+    right: 0;  /* Fixe à droite */
+    z-index: 9999;  /* S'assure que le bandeau reste au-dessus des autres éléments */
+    display: flex;
+    flex-direction: column;  /* Empile les éléments verticalement */
+    align-items: center;
+    background-color: #000;  /* Fond noir pour tout le bandeau */
+    height: 100vh;  /* Hauteur de la page entière */
+    padding: 10px;
+    justify-content: center;  /* Centrer les icônes verticalement */
+}
+
+/* Style des icônes des réseaux sociaux */
+.social-bar a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;  /* Espacement entre chaque icône */
+    width: 50px;  /* Largeur des icônes */
+    height: 50px;  /* Hauteur des icônes */
+    border-radius: 50%;  /* Bord arrondi */
+    background-color: rgb(0, 0, 0);  /* Fond noir pour les icônes */
+    transition: transform 0.3s ease, background-color 0.3s ease;  /* Transition de transformation et couleur */
+    text-decoration: none;  /* Enlève le soulignement */
+}
+
+/* Effet au survol */
+.social-bar a:hover {
+    background-color: #00aced;  /* Changement de couleur au survol */
+    transform: scale(1.1);  /* Légère agrandissement au survol */
+}
+
+/* Style des icônes */
+.social-bar i {
+    font-size: 24px;  /* Taille de l'icône */
+    color: white;  /* Icônes en blanc */
+}
