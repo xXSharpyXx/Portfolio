@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
+
 body, html {
     margin: 0;
     padding: 0;
@@ -9,86 +12,61 @@ html {
     scroll-behavior: smooth;
 }
 
-/* Import de la police Poppins */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
-
-/* Style des titres dans les sections */
-.page h1 {
-    font-family: 'Poppins', sans-serif; /* Applique la police Poppins */
-    font-size: 6rem; /* Taille du texte */
-    font-weight: bold; /* Poids en gras pour plus d'impact */
-    color: white;
-    text-transform: uppercase; /* Met en majuscule pour renforcer l'impact */
-    letter-spacing: 5px; /* Espace entre les lettres pour un effet "ouvert" */
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Ombre du texte */
-    
-    /* Alignement du texte */
-    position: absolute; /* Positionnement absolu pour pouvoir déplacer le texte */
-    left: 200px; /* Décale le texte depuis la gauche */
-    top: 35%; /* Centré verticalement */
-    transform: translateY(-50%); /* Centrer exactement en vertical */
-}
-
-/* Section Portfolio */
 .portfolio-section {
-    background: #000;  /* Fond noir */
+    background: #000000;
     color: white;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
-    text-align: center;
-    height: 100vh;  /* Assurer que la section occupe toute la hauteur de l'écran */
-    padding: 20px;
+    justify-content: left;
+    text-align: left;
 }
 
-.portfolio-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-.portfolio-content h1 {
+h1 {
     font-family: 'Poppins', sans-serif;
     font-size: 6rem;
     font-weight: bold;
-    color: white;
     text-transform: uppercase;
     letter-spacing: 5px;
-    margin-bottom: 15px;
+    margin: 0;
+    color: white;
+    margin-top: 30vh;
+    margin-left: 10vh;
 }
 
-.portfolio-content h2 {
-    font-family: 'Poppins', sans-serif;
-    font-size: 2rem;
-    font-weight: normal;
+h2 {
+    font-family: 'Dancing Script', serif;
+    font-size: 4rem;
     color: white;
-    margin-bottom: 30px;
+    margin: 0;
+    margin-left: 40vw;
+    margin-top: -4vh;
+}
+
+.portfolio-buttons {
+    display: flex;
+    gap: 15px;
 }
 
 .portfolio-buttons button {
-    background-color: transparent; /* Fond transparent */
-    color: white; /* Texte blanc */
-    border: 2px solid white; /* Contour fin blanc */
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
     font-size: 1.5rem;
     padding: 15px 30px;
-    margin: 10px;
-    cursor: pointer;
     border-radius: 50px;
     transition: all 0.3s ease;
-    text-transform: uppercase; /* Texte en majuscule */
+    text-transform: uppercase;
 }
 
 .portfolio-buttons button:hover {
-    background-color: white; /* Fond blanc au survol */
-    color: black; /* Texte noir */
-    border-color: black; /* Contour noir */
+    background-color: white;
+    color: black;
+    border-color: black;
 }
 
-/* Ajout d'une animation subtile au survol */
 .portfolio-buttons button:active {
-    transform: scale(0.95); /* Réduit légèrement la taille du bouton */
+    transform: scale(0.95);
     transition: transform 0.1s ease-in-out;
 }
 
@@ -96,19 +74,13 @@ html {
 .full-screen {
     width: 100vw;
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     color: white;
     font-size: 2rem;
-    font-weight: bold;
-    text-align: center;
     transition: opacity 1s ease-in-out;
     position: absolute;
     top: 0;
     left: 0;
     opacity: 0;
-    pointer-events: none;
 }
 
 .full-screen.active {
@@ -192,46 +164,85 @@ html {
 
 
 
-
-
-
 /* Bandeau fixe à droite, centré verticalement */
 .social-bar {
-    position: fixed;  /* Fixe le bandeau */
-    top: 0;  /* Démarre en haut de la page */
-    right: 0;  /* Fixe à droite */
-    z-index: 9999;  /* S'assure que le bandeau reste au-dessus des autres éléments */
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 9999;
     display: flex;
-    flex-direction: column;  /* Empile les éléments verticalement */
+    flex-direction: column;
     align-items: center;
-    background-color: #000;  /* Fond noir pour tout le bandeau */
-    height: 100vh;  /* Hauteur de la page entière */
+    background-color: #000;
+    height: 100vh;
     padding: 10px;
-    justify-content: center;  /* Centrer les icônes verticalement */
+    justify-content: center;
 }
 
-/* Style des icônes des réseaux sociaux */
 .social-bar a {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 10px 0;  /* Espacement entre chaque icône */
-    width: 50px;  /* Largeur des icônes */
-    height: 50px;  /* Hauteur des icônes */
-    border-radius: 50%;  /* Bord arrondi */
-    background-color: rgb(0, 0, 0);  /* Fond noir pour les icônes */
-    transition: transform 0.3s ease, background-color 0.3s ease;  /* Transition de transformation et couleur */
-    text-decoration: none;  /* Enlève le soulignement */
+    margin: 10px 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    text-decoration: none;
 }
 
-/* Effet au survol */
 .social-bar a:hover {
-    background-color: #00aced;  /* Changement de couleur au survol */
-    transform: scale(1.1);  /* Légère agrandissement au survol */
+    background-color: #00aced;
+    transform: scale(1.1);
 }
 
-/* Style des icônes */
 .social-bar i {
-    font-size: 24px;  /* Taille de l'icône */
-    color: white;  /* Icônes en blanc */
+    font-size: 24px;
+    color: white;
 }
+
+
+
+
+
+
+
+
+
+
+
+.btn-slide{
+    display: inline-block;
+    margin: 1vh;
+    padding: 1vh 2vh;
+    border: 3px solid white; /* Bordure blanche fine */
+    border-radius: 50px; /* Coins arrondis */
+    color: white;
+    background-color: #0000008d;
+    text-decoration: none;
+    font-size: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-slide:hover {
+    background-color: white;
+    color: black;
+}
+
+section:first-of-type>.btn-slide-global{
+    display: flex;
+    margin-top: 11vh;
+    align-items: center;
+    margin: auto;
+}
+
+
+.btn-slide-global{
+    display: flex;
+    margin-top: 1vh;
+    align-items: center;
+    margin-left: 10vh;
+}
+
